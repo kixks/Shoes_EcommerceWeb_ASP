@@ -1,0 +1,43 @@
+﻿@using eCommerceWebApp.Models;
+@model IEnumerable<DescriptionViewModel>;
+
+
+@foreach (var description in Model)
+{
+    <div class="container text-center mt-3">
+        <div class="row">
+            @if (description.Id % 2 != 0)
+            {
+                <!-- When Id is odd, image comes first and description comes second -->
+                <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
+                    <img src="@Url.Content($"~/images/itemShoes/{description.ImageUrl}")" class="img-fluid rounded" />
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-center rounded" style="background-color: @description.HexColor;" id="shoesDescription">
+                    <div id="items-front">
+                        <div id="shoesTitle">@description.Title</div>
+                        <div class="mt-3">@description.DateCreated</div>
+                        <div class="mt-2">@description.Description</div>
+                        <button type="button" class="btn btn-dark mt-5 btn-lg">Add To Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <!-- When Id is even, description comes first and image comes second -->
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-center rounded" style="background-color: @description.HexColor;" id="shoesDescription">
+                    <div id="items-front">
+                        <div id="shoesTitle">@(description.Title)</div>
+                        <div class="mt-3">@description.DateCreated</div>
+                        <div class="mt-2">@description.Description</div>
+                        <button type="button" class="btn btn-dark mt-5 btn-lg">Add To Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
+                    <img src="@Url.Content($"~/images/itemShoes/{description.ImageUrl}")" class="img-fluid rounded" />
+                </div>
+            }
+        </div>
+    </div>
+}
+
+

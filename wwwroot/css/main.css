@@ -1,0 +1,91 @@
+﻿body {
+    background: rgb(187,177,178);
+    background: linear-gradient(312deg, rgba(187,177,178,1) 14%, rgba(255,255,255,1) 84%);
+}
+/*----------------------STYLES FOR NAVBAR-----------------------------*/
+@media (min-width : 992px){
+    #cartIcon {
+        order: 1; /* Place the cart icon before the toggler button */
+        padding-right: 1.5rem;
+    }
+}
+@media (max-width : 992px) {
+    #cartIcon {
+        order: 0; /* Place the cart icon before the toggler button */
+        margin-right: -7rem;
+    }
+}
+#cartIcon {
+    display: none;
+}
+#cartIcon.show{
+    display:block;
+}
+
+
+
+
+
+
+
+/*----------------------STYLES FOR NAVBAR-----------------------------*/
+
+
+/*----------------------STYLES FOR HOME VIEW-----------------------------*/
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from {
+        transform: translate(0,0px);
+    }
+
+    65% {
+        transform: translate(0,15px);
+    }
+
+    to {
+        transform: translate(0,-0px);
+    }
+}
+
+.title-main {
+    font-family: 'Poppins',sans-serif;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.title-sub {
+    font-family: 'Poppins', serif;
+    font-size: 30px;
+}
+
+.sayings {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 40px;
+}
+
+
+/*----------------------STYLES FOR HOME VIEW-----------------------------*/
+
+/*----------------------STYLES FOR DESCRIPTION VIEW-----------------------------*/
+#shoesTitle {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+#shoesDescription div {
+    color: whitesmoke;
+    text-align: justify;
+}
+
+#shoesDescription {
+    padding: 50px;
+}
+/*----------------------STYLES FOR DESCRIPTION VIEW-----------------------------*/
