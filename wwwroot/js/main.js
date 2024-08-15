@@ -50,3 +50,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /*----------------------JS FOR NAVBAR-----------------------------*/
+/*----------------------JS FOR DESCRIPTION-----------------------------*/
+document.addEventListener('DOMContentLoaded', function () {
+    let addToCartBtn1 = document.getElementById('addToCart 1');
+    let addToCartBtn2 = document.getElementById('addToCart 2');
+    console.log(addToCartBtn1);
+    console.log(addToCartBtn2);
+
+    addToCartBtn1.addEventListener('click', function (e) {
+        addToCartBtn1.innerHTML = 'Item Added <i class = "fa-solid fa-check"></i>'
+        addToCartBtn1.classList.remove();
+        addToCartBtn1.classList.add('btn btn-success mt-5 btn-lg')
+    });
+
+    addToCartBtn2.addEventListener('click', function (e) {
+        addToCartBtn2.innerHTML = 'Item Added <i class = "fa-solid fa-check"></i>'
+        addToCartBtn2.classList.remove();
+        addToCartBtn2.classList.add('btn btn-success mt-5 btn-lg')
+    });
+
+
+
+});
+/*----------------------JS FOR DESCRIPTION-----------------------------*/

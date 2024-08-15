@@ -1,11 +1,11 @@
 ﻿@using eCommerceWebApp.Models;
 @model IEnumerable<DescriptionViewModel>;
 
-
 @foreach (var description in Model)
 {
     <div class="container text-center mt-3">
         <div class="row">
+
             @if (description.Id % 2 != 0)
             {
                 <!-- When Id is odd, image comes first and description comes second -->
@@ -17,7 +17,7 @@
                         <div id="shoesTitle">@description.Title</div>
                         <div class="mt-3">@description.DateCreated</div>
                         <div class="mt-2">@description.Description</div>
-                        <button type="button" class="btn btn-dark mt-5 btn-lg">Add To Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        <button type="button" class="btn btn-dark mt-5 btn-lg" id="addToCart">Add To Cart <i class="fa-solid fa-cart-shopping"></i></button>
                     </div>
                 </div>
             }
@@ -29,7 +29,7 @@
                         <div id="shoesTitle">@(description.Title)</div>
                         <div class="mt-3">@description.DateCreated</div>
                         <div class="mt-2">@description.Description</div>
-                        <button type="button" class="btn btn-dark mt-5 btn-lg">Add To Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                        <button type="button" class="btn btn-dark mt-5 btn-lg" id="addToCart">Add To Cart <i class="fa-solid fa-cart-shopping"></i></button>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
