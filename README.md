@@ -1,5 +1,5 @@
 # eCommerceWebApp
 first experiment project in learning ASP.NET Core C#
-Tech used
--ASP.NET Core
--Bootstrap
+<br>Tech used
+<br>-ASP.NET Core
+<br>-Bootstrap
