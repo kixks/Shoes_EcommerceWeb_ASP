@@ -52,24 +52,22 @@ document.addEventListener('DOMContentLoaded', function () {
 /*----------------------JS FOR NAVBAR-----------------------------*/
 /*----------------------JS FOR DESCRIPTION-----------------------------*/
 document.addEventListener('DOMContentLoaded', function () {
-    let addToCartBtn1 = document.getElementById('addToCart 1');
-    let addToCartBtn2 = document.getElementById('addToCart 2');
-    console.log(addToCartBtn1);
-    console.log(addToCartBtn2);
+    let addToCartBtn = document.getElementsByClassName('AddToCartBtn');
+    let cartCount = document.getElementById('cartCounter');
+    let cartIcon = document.getElementById('cartIcon');
 
-    addToCartBtn1.addEventListener('click', function (e) {
-        addToCartBtn1.innerHTML = 'Item Added <i class = "fa-solid fa-check"></i>'
-        addToCartBtn1.classList.remove();
-        addToCartBtn1.classList.add('btn btn-success mt-5 btn-lg')
+    Array.from(addToCartBtn).forEach(individualButton => {
+        individualButton.addEventListener('click', () => {
+            var current = parseInt(cartCount.textContent, 10);
+            var incremented = current + 1;
+            cartCount.textContent = incremented;
+
+            individualButton.innerHTML = 'Added To Cart <i class= "fa-solid fa-check"></i>';
+            individualButton.style.backgroundColor = "#1C6758";
+
+            individualButton.disabled = true;
+        });
     });
-
-    addToCartBtn2.addEventListener('click', function (e) {
-        addToCartBtn2.innerHTML = 'Item Added <i class = "fa-solid fa-check"></i>'
-        addToCartBtn2.classList.remove();
-        addToCartBtn2.classList.add('btn btn-success mt-5 btn-lg')
-    });
-
-
 
 });
 /*----------------------JS FOR DESCRIPTION-----------------------------*/

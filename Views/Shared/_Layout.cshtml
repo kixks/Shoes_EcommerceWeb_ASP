@@ -17,8 +17,8 @@
         <a class="navbar-brand" href="@Url.Action("Index","Home")">
             <div class="container ms-3"><i class="fa-solid fa-shoe-prints"> FOOTPRINT</i></div>
         </a>
-        <div class="destination" id="cartIcon">
-            <a class="nav-link fw-bold ms-2 " href="#">
+        <div id="cartIcon">
+            <a class="nav-link fw-bold ms-2 " href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span id="cartCounter" class="badge bg-danger">0</span>
             </a>
@@ -41,6 +41,17 @@
         </div>
     </nav>
     @RenderBody()
+
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+         aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">SHOE CART</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+        </div>
+    </div>
 
     <script src="@Url.Content("js/main.js")"></script>
 </body>

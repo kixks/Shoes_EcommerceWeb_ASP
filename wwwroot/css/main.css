@@ -19,7 +19,7 @@
     display: none;
 }
 #cartIcon.show{
-    display:block;
+    display:block;  
 }
 
 
@@ -89,17 +89,5 @@
     padding: 50px;
 }
 
-.fly {
-    opacity: 0;
-    background: red !important;
-    border: 0px;
-}
-
-.fly-circled {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: red;
-}
 
 /*----------------------STYLES FOR DESCRIPTION VIEW-----------------------------*/
