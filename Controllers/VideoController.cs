@@ -7,6 +7,9 @@ namespace eCommerceWebApp.Controllers
         public IActionResult Index()
         {
             return View();
+            
+
+
 
         }
     }
